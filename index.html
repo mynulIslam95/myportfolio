@@ -8,68 +8,132 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 40px;
+            margin: 0;
+            padding: 0;
             background-color: #f7f8fc;
+            scroll-behavior: smooth;
         }
 
         header {
             background-color: #333;
             color: #fff;
-            padding: 10px 0;
+            padding: 20px 0;
             text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
         }
 
-        section {
+        nav a {
+            margin: 0 15px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .flex-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .flex-column {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact-info, .projects {
+            background-color: #eee;
+            padding: 20px;
+            border-radius: 5px;
             margin: 20px 0;
         }
 
-        .contact-info {
-            background-color: #eee;
-            padding: 10px;
+        .project-card {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 20px;
             border-radius: 5px;
+            flex: 1;
         }
 
         footer {
             text-align: center;
             margin-top: 50px;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
         }
+
     </style>
 </head>
 
 <body>
+
     <header>
-        <h1>Mynul Islam's Portfolio</h1>
-        <p>Information Engineering Student</p>
+        <div class="container flex-row">
+            <h1>Mynul Islam</h1>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
     </header>
 
-    <section>
-        <h2>About Me</h2>
-        <p>
-            Hello! My name is Mynul Islam and I am currently studying Information Engineering. I have a passion for technology and web development. Welcome to my portfolio.
-        </p>
-    </section>
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                Hello! My name is Mynul Islam and I am currently studying Information Engineering. I have a passion for technology and web development. Welcome to my portfolio.
+            </p>
+        </section>
 
-    <section>
-        <h2>Skills</h2>
-        <ul>
-            <!-- You can list your skills here -->
-            <li>Web Development</li>
-            <li>Programming</li>
-            <li>Data Analysis</li>
-            <!-- Add or remove skills as you see fit -->
-        </ul>
-    </section>
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>Web Development</li>
+                <li>Programming</li>
+                <li>Data Analysis</li>
+            </ul>
+        </section>
 
-    <section class="contact-info">
-        <h2>Contact Details</h2>
-        <p>Phone: +4917632798094</p>
-        <a href="https://wa.link/hs2xi2">Connect me on WhatsApp</a>
-        <!-- You can add more contact details if you want, like your email address -->
-    </section>
+        <section id="projects" class="projects">
+            <h2>My Projects</h2>
+            <div class="flex-row">
+                <!-- Sample projects; update these with your real projects later -->
+                <div class="project-card">
+                    <h3>Project 1</h3>
+                    <p>Description of project 1...</p>
+                </div>
+                <div class="project-card">
+                    <h3>Project 2</h3>
+                    <p>Description of project 2...</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-info">
+            <h2>Contact Details</h2>
+            <p>Phone: +4917632798094</p>
+        </section>
+    </div>
 
     <footer>
         <p>&copy; 2023 Mynul Islam</p>
     </footer>
+
 </body>
 
 </html>
